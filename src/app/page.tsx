@@ -22,7 +22,7 @@ export default function Home() {
       <div className="bg-white flex md:flex-row flex-col  ">
         <div className="grid grid-cols-1 md:grid-cols-(--grid-template-columns) max-w-[1320] mx-auto gap-[70px]  px-5 py-4 ">
           <div className=" flex flex-col gap-4">
-            <Player src="/videos/sample.mp4" poster="/images/thumb.jpg" />
+            <Player src="videos/sample.mp4" poster="images/thumb.jpg" />
             <IconLinks></IconLinks>
             <h2 className="text-4xl font-medium my-5 ">Course Materials</h2>
             <CourseMaterial></CourseMaterial>
