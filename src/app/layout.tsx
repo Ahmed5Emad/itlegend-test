@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { leagueSpartan } from "./ui/fonts";
-// @ts-ignore
+
 import "./globals.css";
 
 

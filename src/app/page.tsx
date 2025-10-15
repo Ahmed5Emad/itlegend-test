@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Links from "./ui/links";
 import Player from "./ui/player";
 import IconLinks from "./ui/iconlinks";

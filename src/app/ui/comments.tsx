@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi"; // Using react-icons for the arrow
 
 export default function Comments() {
@@ -36,9 +37,11 @@ export default function Comments() {
             className="border-b border-gray-200 pb-8 last:border-b-0"
           >
             <div className="flex items-start gap-x-5">
-              <img
+              <Image
                 src={item.imgurl}
                 alt={`Avatar of ${item.name}`}
+                width={64}
+                height={64}
                 className="h-16 w-16 rounded-full object-cover"
               />
               <div className="flex-1">
