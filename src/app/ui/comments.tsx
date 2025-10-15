@@ -7,21 +7,21 @@ export default function Comments() {
   const comments = [
     {
       name: "Student Name Gose Here",
-      imgurl: "https://placehold.co/100x100/EFEFEF/333?text=SN&font=sans-serif", // Placeholder avatar
+      imgurl: "/images/avatar1.webp", // Placeholder avatar
       date: "Oct 10,2021",
       comment:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem facilis tempore reiciendis laboriosam voluptatum dicta expedita aliquam nesciunt vitae eius!",
     },
     {
       name: "Student Name Gose Here",
-      imgurl: "https://placehold.co/100x100/EFEFEF/333?text=SN&font=sans-serif", // Placeholder avatar
+      imgurl: "/images/avatar2.webp", // Placeholder avatar
       date: "Oct 15,2021",
       comment:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem facilis tempore reiciendis laboriosam voluptatum dicta expedita aliquam nesciunt vitae eius!",
     },
     {
       name: "Student Name Gose Here",
-      imgurl: "https://placehold.co/100x100/EFEFEF/333?text=SN&font=sans-serif", // Placeholder avatar
+      imgurl: "/images/avatar3.webp", // Placeholder avatar
       date: "Oct 19,2021",
       comment:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem facilis tempore reiciendis laboriosam voluptatum dicta expedita aliquam nesciunt vitae eius!",
