@@ -83,7 +83,7 @@ export default function CourseTopics() {
       {courseSections.map((section, index) => (
         <div
           key={index}
-          className="bg-white border border-gray-200 mb-6 rounded-sm shadow-sm overflow-hidden"
+          className="bg-white border border-gray-200 mb-12 rounded-sm shadow-sm overflow-hidden"
         >
           <div
             className="flex justify-between items-center cursor-pointer p-5"
