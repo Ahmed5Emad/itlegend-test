@@ -44,7 +44,7 @@ const CourseMaterial: React.FC = () => {
 
   return (
     <div className="w-full max-w-4xl rounded-s-sm bg-white pt-[38px] pb-[18px] pl-6 pr-5 shadow-(--my-shadow)">
-      <div className="flex w-full flex-col md:flex-row md:gap-[16%] text-gray-600 text-[20px]">
+      <div className="flex w-full flex-col lg:flex-row lg:gap-[16%] text-gray-600 text-[20px]">
         <div className="flex flex-1  flex-col px-3 gap-y-6">
           <DetailItem
             icon={<FiClock className="" />}

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { FiArrowRight } from "react-icons/fi"; // Using react-icons for the arrow
 
 export default function Comments() {
   const comments = [

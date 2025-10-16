@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { leagueSpartan } from "./ui/fonts";
+import { ProgressProvider } from "@/lib/ProgressContext";
 
 import "./globals.css";
 
@@ -19,7 +20,7 @@ export default function RootLayout({
       <body
         className={`${leagueSpartan.className} bg-white  antialiased`}
       >
-        {children}
+        <ProgressProvider>{children}</ProgressProvider>
       </body>
     </html>
   );

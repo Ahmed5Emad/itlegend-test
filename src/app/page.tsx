@@ -20,16 +20,21 @@ export default function Home() {
       </div>
 
       <div className="bg-white">
-        <div className="grid grid-cols-1 lg:grid-cols-(--grid-template-columns) 2xl:max-w-[1320px] lg:max-w-[1140px] md:max-w-[720px] sm:max-w-[540px] mx-auto gap-[70px] px-5 py-4">
-          <div className="flex flex-col lg:order-1">
+        <div className="grid grid-cols-1 lg:grid-cols-(--grid-template-columns) grid-rows-(--grid-template-rows) 2xl:max-w-[1320px] lg:max-w-[1140px] md:max-w-[720px] sm:max-w-[540px] mx-auto px-5 py-4">
+          <div className="flex flex-col lg:order-1 md:relative sticky bg-white z-20  pt-2 top-0 w-full ">
             <Player src="videos/sample.mp4" poster="images/thumb.jpg" />
+          </div>
+          <div className="flex flex-col lg:order-2 order-1">
             <IconLinks />
             <h2 className="text-4xl font-medium my-5 mb-[40px]">
               Course Materials
             </h2>
             <CourseMaterial />
           </div>
-          <div id="list" className="flex flex-col gap-4 lg:order-2 lg:row-span-2">
+          <div
+            id="list"
+            className="flex flex-col  gap-4 lg:ml-[70px] mt-[70px] lg:mt-0 order-3 lg:order-1 row-span-3"
+          >
             <h2 className="text-4xl font-medium mb-5">
               Topics for This Course
             </h2>
@@ -39,8 +44,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div id="comments" className="flex flex-col lg:order-3">
-            <h2 className="text-4xl font-medium my-5 ">Comments</h2>
+          <div
+            id="comments"
+            className="flex flex-col lg:order-4 order-4 lg:mt-[70px] mt-[22px"
+          >
+            <h2 className="text-4xl font-medium my-5 mb-[40px]">Comments</h2>
             <Comments />
             <Submit />
           </div>
