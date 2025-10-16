@@ -68,7 +68,7 @@ export default function PopupLeaderboard({
           </div>
 
           {/* Motivational Message Box */}
-          <div className="bg-gray-100 flex-row flex items-center rounded-lg p-4 gap-x-1 text-right mb-6">
+          <div className="bg-[#F5F9FA] flex-row flex items-center rounded-lg p-4 gap-x-1 text-right mb-6">
             <p className="text-gray-700 leading-relaxed">
     {encourage[2].encourage3}
             </p>
@@ -76,11 +76,11 @@ export default function PopupLeaderboard({
           </div>
 
           {/* Leaderboard Entries */}
-          <div className="space-y-3">
+          <div className="space-y-3 p-4 bg-[#F5F9FA] rounded-2xl">
             {students.map((student, index) => (
               <div
                 key={index}
-                className="bg-gray-100 rounded-lg p-3 flex items-center justify-between"
+                className="bg-white rounded-lg p-3 flex items-center justify-between"
               >
                 <div className="flex items-center">
                   <span className="text-lg font-bold text-gray-600 mr-3">{index + 1}</span>

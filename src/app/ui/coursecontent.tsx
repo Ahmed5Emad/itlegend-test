@@ -3,8 +3,10 @@ import { useState } from "react";
 import { FaLock } from "react-icons/fa";
 import { IoAdd, IoRemove } from "react-icons/io5";
 import { LiaFileAlt } from "react-icons/lia";
+import ExamPopup from "./exampopup";
 
 export default function CourseTopics() {
+  const [isExamOpen, setIsExamOpen] = useState(false);
   const courseSections = [
     {
       week: "Week 1–4",
@@ -117,7 +119,16 @@ export default function CourseTopics() {
               {section.lessons.map((lesson, i) => (
                 <div
                   key={i}
-                  className="flex justify-between items-center border-b last:border-b-0 border-gray-100 py-2 hover:bg-gray-50 rounded-lg transition"
+                  onClick={() => {
+                    if (
+                      lesson.title === "Course Overview" &&
+                      lesson.questions === "0 QUESTION" &&
+                      lesson.duration === "10 MINUTES"
+                    ) {
+                      setIsExamOpen(true);
+                    }
+                  }}
+                  className="flex justify-between items-center border-b last:border-b-0 border-gray-100 py-2 hover:bg-gray-50 rounded-lg transition cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
                     <LiaFileAlt className="text-gray-500" />
@@ -147,6 +158,7 @@ export default function CourseTopics() {
           </div>
         </div>
       ))}
+      <ExamPopup isOpen={isExamOpen} onClose={() => setIsExamOpen(false)} />
     </div>
   );
 }
