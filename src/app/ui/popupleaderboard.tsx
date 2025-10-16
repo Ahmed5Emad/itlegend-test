@@ -44,12 +44,12 @@ export default function PopupLeaderboard({
   ];
 
   return (
-    // Main container to center the content, with a light background
+    
     <div
       onClick={onClose}
       className="fixed inset-0 bg-black/50 flex justify-center items-center z-50 p-4"
     >
-      {/* Blue bordered container */}
+      
       <div
         onClick={(e) => e.stopPropagation()}
         className=" p-1 rounded-lg shadow-lg relative"
@@ -61,13 +61,13 @@ export default function PopupLeaderboard({
           <FiX size={24} />
         </button>
         <div className="bg-white rounded-md p-6 w-full max-w-sm">
-          {/* Header Section */}
+          
           <div className="text-center mb-5">
             <p className="text-lg text-blue-800">Course Name Shown Here</p>
             <h1 className="text-2xl font-bold text-black">Leaderboard</h1>
           </div>
 
-          {/* Motivational Message Box */}
+          
           <div className="bg-[#F5F9FA] flex-row flex items-center rounded-lg p-4 gap-x-1 text-right mb-6">
             <p className="text-gray-700 leading-relaxed">
     {encourage[2].encourage3}
@@ -75,7 +75,7 @@ export default function PopupLeaderboard({
             <p className="text-6xl">{encourage[2].emoji3}</p>
           </div>
 
-          {/* Leaderboard Entries */}
+          
           <div className="space-y-3 p-4 bg-[#F5F9FA] rounded-2xl">
             {students.map((student, index) => (
               <div

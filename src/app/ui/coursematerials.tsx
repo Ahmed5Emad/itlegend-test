@@ -11,7 +11,7 @@ import {
   FiAward,
 } from "react-icons/fi";
 
-// Define an interface for the course details for type safety
+
 interface CourseDetails {
   duration: string;
   lessons: number;
@@ -23,7 +23,7 @@ interface CourseDetails {
   certificate: string;
 }
 
-// Define the props for the reusable DetailItem component
+
 interface DetailItemProps {
   icon: React.ReactNode;
   label: string;
@@ -95,7 +95,7 @@ const CourseMaterial: React.FC = () => {
   );
 };
 
-// Reusable component for each detail item
+
 const DetailItem: React.FC<DetailItemProps> = ({ icon, label, value }) => (
   <div className="border-b border-gray-200 pb-4 last:border-b-0">
     <div className="flex items-center justify-between">

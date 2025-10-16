@@ -87,14 +87,14 @@ export default function ExamPopup({ isOpen, onClose }: ExamPopupProps) {
     }
   };
 
-  // Custom Checkbox Component for visual fidelity
+  
   const CustomCheckbox = ({ selected, isSelectedOption }: { selected: boolean, isSelectedOption: boolean }) => (
     <div
       className={`w-6 h-6 rounded-[4px] border-2 flex items-center justify-center
         ${
           isSelectedOption
             ? "border-white"
-            : "border-[#5468ff]" // Blue border for unselected items
+            : "border-[#5468ff]" 
         }`}
     >
       {selected && <div className="w-2.5 h-2.5 bg-white rounded-sm" />}
@@ -103,7 +103,7 @@ export default function ExamPopup({ isOpen, onClose }: ExamPopupProps) {
 
   if (showScore) {
     return (
-      <div className="fixed inset-0 flex justify-center items-center bg-gray-800 z-50 p-0 md:p-4">
+      <div className="fixed inset-0 flex justify-center items-center bg-black/50  z-50 p-0 md:p-4">
         <div className="relative w-full max-w-md h-full max-h-[800px] bg-[#3448a1] flex flex-col overflow-hidden shadow-2xl md:rounded-3xl font-sans">
           <div className="flex-1 bg-[#f0f2f5] rounded-t-[35px] px-6 pt-8 pb-6 flex flex-col justify-center items-center">
             <h2 className="text-3xl font-bold mb-4">Quiz Completed!</h2>
@@ -118,13 +118,13 @@ export default function ExamPopup({ isOpen, onClose }: ExamPopupProps) {
   }
 
   return (
-    // Outer container mimicking a mobile screen wrapper
-    <div className="fixed inset-0 flex justify-center items-center bg-gray-800 z-50 p-0 md:p-4">
+    
+    <div className="fixed inset-0 flex justify-center items-center bg-black/50   z-50 p-0 md:p-4">
       <div className="relative w-full max-w-md h-full max-h-[800px] bg-[#3448a1] flex flex-col overflow-hidden shadow-2xl md:rounded-3xl font-sans">
         
-        {/* --- Header Section (Blue) --- */}
+        
         <div className="pt-8 pb-4 px-6">
-          {/* Top Bar: Back Icon & Timer */}
+          
           <div className="relative flex items-center justify-center mb-6">
             <button
               onClick={onClose}
@@ -133,7 +133,7 @@ export default function ExamPopup({ isOpen, onClose }: ExamPopupProps) {
               <FiChevronLeft size={32} />
             </button>
 
-            {/* Timer Pill with Glow */}
+            
             <div className="bg-[#dec010] text-white px-5 py-1.5 rounded-xl flex items-center gap-2 shadow-[0_0_20px_rgba(222,192,16,0.5)] font-bold text-lg">
               <FiClock className="stroke-[2]" />
               <span>
@@ -144,7 +144,7 @@ export default function ExamPopup({ isOpen, onClose }: ExamPopupProps) {
             </div>
           </div>
 
-          {/* Pagination Circles */}
+          
           <div className="flex justify-center gap-3 mt-8 mb-4">
             {questionsData.map((q, index) => {
               const isActive = index === currentQIndex;
@@ -165,10 +165,10 @@ export default function ExamPopup({ isOpen, onClose }: ExamPopupProps) {
           </div>
         </div>
 
-        {/* --- Content Section (White Card) --- */}
+        
         <div className="flex-1 bg-[#f0f2f5] rounded-t-[35px] px-6 pt-8 pb-6 flex flex-col overflow-y-auto">
           
-          {/* Question Text */}
+          
           <div className="mb-8">
             <h2 className="text-[#333333] text-[1.1rem] font-bold leading-tight">
               <span className="mr-1">{currentQuestionData.id}.</span>
@@ -177,7 +177,7 @@ export default function ExamPopup({ isOpen, onClose }: ExamPopupProps) {
             </h2>
           </div>
 
-          {/* Options Stack */}
+          
           <div className="flex flex-col gap-4 flex-1">
             {currentQuestionData.options.map((option) => {
               const isSelected = selectedAnswer === option;
@@ -192,13 +192,13 @@ export default function ExamPopup({ isOpen, onClose }: ExamPopupProps) {
                         : "bg-[#eaecee] text-[#444444]"
                     }`}
                 >
-                  {/* Checkbox Container */}
+                  
                   <div className={`w-16 flex items-center justify-center shrink-0
                      ${isSelected ? "border-r border-white/20" : "border-r border-gray-300"}`}>
                     <CustomCheckbox selected={isSelected} isSelectedOption={isSelected} />
                   </div>
                   
-                  {/* Option Text */}
+                  
                   <div className="flex-1 py-4 px-5 font-medium flex items-center">
                     {option}
                   </div>
@@ -207,7 +207,7 @@ export default function ExamPopup({ isOpen, onClose }: ExamPopupProps) {
             })}
           </div>
 
-          {/* Navigation Buttons (Optional, hidden based on image, but kept for logic) */}
+          
           
           <div className="flex justify-end mt-4">
             <button onClick={handleNext} className="bg-[#5468ff] hover:bg-[#7e91e6] text-white px-6 py-3 rounded-xl font-bold shadow-lg shadow-blue-500/30">
